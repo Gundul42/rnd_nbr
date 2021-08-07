@@ -6,7 +6,7 @@
 /*   By: graja <graja@student.42wolfsburg.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/06 17:12:42 by graja             #+#    #+#             */
-/*   Updated: 2021/08/07 10:48:03 by graja            ###   ########.fr       */
+/*   Updated: 2021/08/07 14:05:47 by graja            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,28 +21,33 @@ int	main(int argc,char **argv)
 	int	max;
 	int	i;
 	char	*chk;
+	int	flag;
 
 	i = 0;
 	srandom(time(NULL));
 	if (argc < 3)
 	{
-		printf("USE: rnd <n element> <max value>\n\n");
+		printf("\nUSE: rnd <n element> <max value> <-1|0|1>\n\n");
 		return (0);
 	}
 	n = atoi(argv[1]);
 	max = atoi(argv[2]);
 	if (n > max)
 	{
-		printf("ERROR: n is larger than max possible value\n\n");
+		printf("\nERROR: n is larger than max possible value\n\n");
 		return (0);
 	}
+	if (argv[3])
+		flag = atoi(argv[3]);
+	else
+		flag = 0;
 	chk = calloc(max * 2 + 1, sizeof(char));
 	if (!chk)
 		return (0);
 	while (n > 0 && i < n)
 	{
 		nbr = random() % max;
-		if (random() % 2)
+		if (((random() % 2) && !flag) || (flag == -1))
 			nbr *= -1;
 		if ((nbr < 0 && !chk[nbr * -1]) || (nbr >= 0 && !chk[max + nbr]))
 		{
