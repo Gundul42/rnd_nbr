@@ -9,7 +9,7 @@ first compile with: gcc rnd.c -o rnd
 
 Usage:
 
-rnd <n numbers> <max value>
+rnd "n numbers" "max value"
   
   rnd 10 1000 will generate 10 random numbers in the range of -1000 to 1000
   
