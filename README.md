@@ -7,15 +7,22 @@ The numbers are separated by a space.
 
 first compile with: gcc rnd.c -o rnd
 
+
 Usage:
 
 rnd "n numbers" "max value" "-1|0|1"
 
 n numbers	= how many numbers you need
+
 max value	= max possible value of a generated number
+
 -1		= only negative numbers
+
 0 or nothing	= mixed numbers
+
 1		= only positive numbers
+
+
   
   rnd 10 1000 will generate 10 random numbers in the range of -1000 to 1000
   
