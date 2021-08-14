@@ -39,6 +39,14 @@ Useage together with push_swap project:
   
   rnd 500 10000 | xargs push_swap
   
+
+
+NEW:
+
+test your push_swap by simple cloning in your push_swap folder and type:
+
+on linux: bash testme.sh
+on apple: bash appletest.sh
   
   
 Please read the license:
