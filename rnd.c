@@ -6,7 +6,7 @@
 /*   By: graja <graja@student.42wolfsburg.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/06 17:12:42 by graja             #+#    #+#             */
-/*   Updated: 2021/08/07 14:05:47 by graja            ###   ########.fr       */
+/*   Updated: 2021/08/21 10:07:13 by graja            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,6 +47,8 @@ int	main(int argc,char **argv)
 	while (n > 0 && i < n)
 	{
 		nbr = random() % max;
+		if (flag == -1)
+			nbr += 1;
 		if (((random() % 2) && !flag) || (flag == -1))
 			nbr *= -1;
 		if ((nbr < 0 && !chk[nbr * -1]) || (nbr >= 0 && !chk[max + nbr]))
