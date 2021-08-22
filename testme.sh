@@ -6,7 +6,7 @@
 #    By: graja <graja@student.42wolfsburg.de>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/08/13 17:40:34 by graja             #+#    #+#              #
-#    Updated: 2021/08/14 08:00:42 by graja            ###   ########.fr        #
+#    Updated: 2021/08/22 08:32:03 by graja            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -93,36 +93,6 @@ echo "Push_swap needed $DIFF seconds"
 TEST=$(./rnd 1000 100000000 -1)
 echo
 echo "Test with 1000:"
-START=$(date +%s)
-../push_swap $TEST | wc -l
-END=$(date +%s)
-DIFF=$(( $END - $START ))
-echo "Push_swap needed $DIFF seconds"
-../push_swap $TEST | ./checker $TEST
-
-TEST=$(./rnd 1500 5000 1)
-echo
-echo "Test with 1500:"
-START=$(date +%s)
-../push_swap $TEST | wc -l
-END=$(date +%s)
-DIFF=$(( $END - $START ))
-echo "Push_swap needed $DIFF seconds"
-../push_swap $TEST | ./checker $TEST
-
-TEST=$(./rnd 3000 10000 1)
-echo
-echo "Test with 3000:"
-START=$(date +%s)
-../push_swap $TEST | wc -l
-END=$(date +%s)
-DIFF=$(( $END - $START ))
-echo "Push_swap needed $DIFF seconds"
-../push_swap $TEST | ./checker $TEST
-
-TEST=$(./rnd 3000 10000)
-echo
-echo "Test with 3000:"
 START=$(date +%s)
 ../push_swap $TEST | wc -l
 END=$(date +%s)
