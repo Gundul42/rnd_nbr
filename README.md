@@ -51,3 +51,5 @@ on apple: bash appletest.sh
   
 Please read the license:
   no garantees, no support, this was made for Linux.
+  Please use Github for bugs and other issues
+

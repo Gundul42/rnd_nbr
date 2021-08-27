@@ -6,7 +6,7 @@
 #    By: graja <graja@student.42wolfsburg.de>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/08/13 17:40:34 by graja             #+#    #+#              #
-#    Updated: 2021/08/27 15:24:36 by graja            ###   ########.fr        #
+#    Updated: 2021/08/27 17:44:05 by graja            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -28,7 +28,7 @@ if [ -f ../checker ]; then
 	BONUS=$"Y"
 fi
 
-TEST=$(./rnd 3 100 1)
+TEST=$(./rnd 3 100 0)
 echo
 echo "Test with 3:"
 START=$(date +%s)
@@ -44,7 +44,7 @@ else
 fi
 echo "Push_swap needed $DIFF seconds"
 
-TEST=$(./rnd 5 1000 -1)
+TEST=$(./rnd 5 1000 0)
 echo
 echo "Test with 5:"
 START=$(date +%s)
@@ -60,7 +60,7 @@ else
 fi
 echo "Push_swap needed $DIFF seconds"
 
-TEST=$(./rnd 100 10000000 -1)
+TEST=$(./rnd 100 10000000 0)
 echo
 echo "Test with 100:"
 START=$(date +%s)
@@ -76,7 +76,7 @@ else
 fi
 echo "Push_swap needed $DIFF seconds"
 
-TEST=$(./rnd 500 100000000 1)
+TEST=$(./rnd 500 100000000 0)
 echo
 echo "Test with 500:"
 START=$(date +%s)
